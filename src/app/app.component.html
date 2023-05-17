@@ -1,18 +1,13 @@
-{{ title }}
+<div class="p-8">
+    <input type="date" name="" id="">
+    <input type="text" name="" id="">
 
-<!-- <pre>{{ mounts | json }}</pre> -->
+    <hr>
 
-<br />
-<div class="px-5 d-lg-flex">
-  <div class="row">
-    <div
-      class="card card-body m-4 bg-light col-2"
-      *ngFor="let item of mounts | keyvalue"
-    >
-      <!--     {{ item | json }} -->
-      <div class="fw-bold text-warning">{{ item.key }}</div>
-      {{ item.value.days }}
-    </div>
-  </div>
+    <app-grid [data]="['bob','kris','zuza']"></app-grid>
+
+    <app-grid [data]="['pastor', 'jp2', 'benedykt16','franciszek']"></app-grid>
+
+    <app-grid [data]="['pinar', 'alicja']"></app-grid>
+
 </div>
-kk
