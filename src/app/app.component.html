@@ -3,7 +3,13 @@
     <input type="text" name="" id="">
 
     <hr>
-
+    {{title}}
+    <div *ngFor="let item of data">
+      {{item.title}}
+      {{item.price}}
+      {{item.imgSrc}}
+      <img [src]="item.imgSrc" alt="">
+    </div>
     <app-grid [data]="['bob','kris','zuza']"></app-grid>
 
     <app-grid [data]="['pastor', 'jp2', 'benedykt16','franciszek']"></app-grid>
