@@ -1,19 +1,27 @@
-<div class="p-8">
-    <input type="date" name="" id="">
-    <input type="text" name="" id="">
-
-    <hr>
-    {{title}}
-    <div *ngFor="let item of data">
-      {{item.title}}
-      {{item.price}}
-      {{item.imgSrc}}
-      <img [src]="item.imgSrc" alt="">
+<div class="p-5 box">
+  <input type="date" name="" id="" class="form-control" />
+  <input type="text" name="" id="" class="form-control"/>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">@</span>
     </div>
-    <app-grid [data]="['bob','kris','zuza']"></app-grid>
+    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+  </div>
 
-    <app-grid [data]="['pastor', 'jp2', 'benedykt16','franciszek']"></app-grid>
+  <hr />
+  {{ title }}
+  <div style="padding: 5px; border: 4px dashed green; margin: 4px;" *ngFor="let item of data">
 
-    <app-grid [data]="['pinar', 'alicja']"></app-grid>
+    <span style="font-weight: bold; background-color: #218b31; color: #a8b92b; ">
+      {{item.title}}
+    </span>
+    {{ item.price }}
 
+    <img [src]="item.imgSrc" alt="" width="50" style="border: 4px dashed red" />
+  </div>
+  <app-grid [data]="['bob', 'kris', 'zuza']"></app-grid>
+
+  <app-grid [data]="['pastor', 'jp2', 'benedykt16', 'franciszek']"></app-grid>
+
+  <app-grid [data]="['pinar', 'alicja']"></app-grid>
 </div>
