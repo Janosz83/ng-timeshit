@@ -9,15 +9,21 @@
   </div>
 
   <hr />
-  {{ title }}
-  <div style="padding: 5px; border: 4px dashed green; margin: 4px;" *ngFor="let item of data">
+  <div class="fw-bold text-danger"> {{title}} </div>
+  <div [ngStyle]="{background: color}" style="padding: 5px;  margin: 4px; border-radius: 20px;" [ngClass]="{odd: !odd}"
+  *ngFor="let item of data; let odd=odd; let idx=index">
+  {{idx}}
 
-    <span style="font-weight: bold; background-color: #218b31; color: #a8b92b; ">
+
+    <span style=" font-weight: bold; background-color: #218b31; color: #a8b92b; margin: 5px;border-radius: 5px; " >
       {{item.title}}
     </span>
-    {{ item.price }}
 
-    <img [src]="item.imgSrc" alt="" width="50" style="border: 4px dashed red" />
+    <span style=" padding:0 5px; border: 2px solid black; border-radius: 15px; background-color: antiquewhite;"> {{ item.price }}</span>
+
+
+    <img [src]="item.imgSrc" alt="" width="50" style="border: 2px dashed rgb(22, 37, 110); margin: 0 5px; border-radius: 10px;" />
+    <button (click)="onClick(item.title)" style="border-radius: 10px;"> kliknij </button>
   </div>
   <app-grid [data]="['bob', 'kris', 'zuza']"></app-grid>
 
